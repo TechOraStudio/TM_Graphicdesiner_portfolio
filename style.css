@@ -198,21 +198,21 @@ img, video {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(12, 12, 15, 0.78);
+    background: rgba(255, 250, 244, 0.94);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(201, 169, 110, 0.35);
+    border: 1px solid rgba(114, 33, 43, 0.14);
     border-radius: 100px;
     z-index: 100;
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 10px 30px rgba(92, 23, 32, 0.14);
 }
 
 .site-header.scrolled {
     top: 10px;
-    background: rgba(10, 10, 13, 0.9);
-    border-color: rgba(201, 169, 110, 0.4);
-    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.65), 0 0 20px rgba(114, 33, 43, 0.2);
+    background: rgba(255, 250, 244, 0.98);
+    border-color: rgba(114, 33, 43, 0.2);
+    box-shadow: 0 14px 40px rgba(92, 23, 32, 0.18), 0 0 20px rgba(114, 33, 43, 0.1);
 }
 
 .brand {
@@ -227,15 +227,11 @@ img, video {
 }
 
 .brand-text {
-    display: inline-block;
     font-family: var(--serif);
     font-weight: 700;
     font-size: 24px;
     letter-spacing: -1.5px;
     color: var(--wine);
-    background: var(--panel);
-    border-radius: 5px;
-    padding: 0 5px;
 }
 
 .brand-dot {
@@ -248,7 +244,7 @@ img, video {
     font-size: 9px;
     letter-spacing: 0.14em;
     color: var(--muted);
-    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 1px solid rgba(114, 33, 43, 0.2);
     padding-left: 8px;
 }
 
@@ -259,8 +255,8 @@ img, video {
     align-items: center;
     gap: 4px;
     padding: 4px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(114, 33, 43, 0.035);
+    border: 1px solid rgba(114, 33, 43, 0.08);
     border-radius: 100px;
 }
 
@@ -286,16 +282,16 @@ img, video {
     border-radius: 100px;
     font-size: 12px;
     font-weight: 500;
-    color: #c9c6c4;
+    color: var(--muted);
     transition: color 0.25s ease;
 }
 
 .nav-link:hover {
-    color: #ffffff;
+    color: var(--wine);
 }
 
 .nav-link.active {
-    color: #ffffff;
+    color: var(--wine);
 }
 
 .nav-contact {
@@ -305,7 +301,7 @@ img, video {
     padding: 7px 18px;
     border-radius: 100px;
     background: linear-gradient(135deg, rgba(114, 33, 43, 0.95), rgba(165, 106, 69, 0.9));
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(201, 169, 110, 0.5);
     color: #ffffff !important;
     font-size: 11px;
     font-weight: 600;
@@ -2066,7 +2062,7 @@ body.modal-open .cursor-ring {
         display: none;
         position: fixed;
         inset: 0;
-        background: rgba(8, 8, 12, 0.98);
+        background: rgba(245, 238, 230, 0.98);
         backdrop-filter: blur(28px);
         -webkit-backdrop-filter: blur(28px);
         flex-direction: column;
@@ -2108,7 +2104,7 @@ body.modal-open .cursor-ring {
         height: 38px;
         border: 1px solid var(--line-strong);
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.04);
+        background: rgba(114, 33, 43, 0.04);
         align-items: center;
         justify-content: center;
         flex-direction: column;
@@ -2120,7 +2116,7 @@ body.modal-open .cursor-ring {
     .menu-toggle span {
         width: 16px;
         height: 1.5px;
-        background: #ffffff;
+        background: var(--wine);
         transition: transform 0.25s, opacity 0.25s;
     }
 
