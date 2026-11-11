@@ -59,7 +59,7 @@ const CONFIG = {
             "images/social media post/umberella.png",
             "images/social media post/wht we can do .png"
         ],
-        "Brand Identity": [
+        "Logo & Brand Identity": [
             "images/logo and brand identity/luna caffe .png",
             "images/logo and brand identity/Digital Boost Brand Identity Board.png",
             "images/logo and brand identity/Velvet Muse Luxury Brand Board.png",
@@ -425,7 +425,7 @@ let currentCategoryDesigns = [];
 // Curated high-impact featured cover for each category (1 design shown upfront)
 const featuredCovers = {
     "Social Media": "images/social media post/gD.png",
-    "Brand Identity": "images/logo and brand identity/luna caffe .png",
+    "Logo & Brand Identity": "images/logo and brand identity/luna caffe .png",
     "Business Cards & Stationery": "images/Business Cards & Stationery/Tooba Murtaza.png",
     "Packaging & Labels": "images/packaging and label design/ChatGPT Image Sep 4, 2026, 06_37_24 PM.png",
     "Typography": "images/typography/mistake.jpg",

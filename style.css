@@ -227,11 +227,15 @@ img, video {
 }
 
 .brand-text {
+    display: inline-block;
     font-family: var(--serif);
     font-weight: 700;
     font-size: 24px;
     letter-spacing: -1.5px;
-    color: #ffffff;
+    color: var(--wine);
+    background: var(--panel);
+    border-radius: 5px;
+    padding: 0 5px;
 }
 
 .brand-dot {
@@ -308,12 +312,19 @@ img, video {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    transition: transform 0.25s, box-shadow 0.25s;
+    transition: transform 0.25s, box-shadow 0.25s, background 0.25s, color 0.25s, border-color 0.25s;
 }
 
 .nav-contact:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 20px var(--pink-glow);
+    background: var(--panel);
+    border-color: var(--gold);
+    color: var(--wine) !important;
+    box-shadow: 0 0 18px rgba(201, 169, 110, 0.35);
+}
+
+.nav-contact:hover span {
+    transform: translate(2px, -2px);
 }
 
 .menu-toggle {
@@ -543,6 +554,24 @@ img, video {
     transform: translate(3px, -3px);
 }
 
+.hero-actions .text-link {
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    transition: color 0.25s, background 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.hero-actions .text-link:hover {
+    color: var(--wine);
+    background: var(--panel);
+    border-color: var(--gold);
+    box-shadow: 0 4px 16px rgba(201, 169, 110, 0.22);
+}
+
+.hero-actions .text-link:hover span {
+    color: var(--wine);
+}
+
 /* ============================================================
    SIGMA METRICS COUNTER BAR
    ============================================================ */
@@ -614,11 +643,12 @@ img, video {
     top: 25%;
     width: 210px;
     aspect-ratio: 1;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(201, 169, 110, 0.22);
+    box-shadow: 0 0 28px rgba(114, 33, 43, 0.08), inset 0 0 24px rgba(201, 169, 110, 0.06);
     border-radius: 50%;
     display: grid;
     place-items: center;
-    color: var(--gold);
+    color: var(--wine);
     font: italic 52px var(--serif);
     transform: rotate(-16deg);
     animation: orbfloat 8s ease-in-out infinite;
@@ -630,16 +660,22 @@ img, video {
 .hero-orb::after {
     content: "";
     position: absolute;
-    border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: 50%;
-    inset: 16px;
-    animation: ringPulse 6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.hero-orb::before {
+    inset: -10px;
+    border: 1px solid rgba(201, 169, 110, 0.4);
+    border-top-color: var(--gold);
+    border-right-color: var(--wine);
+    animation: ringRotate 12s linear infinite;
 }
 
 .hero-orb::after {
-    inset: -18px;
-    border-color: rgba(114, 33, 43, 0.2);
-    animation-delay: 1.5s;
+    inset: 14px;
+    border: 1px dashed rgba(114, 33, 43, 0.24);
+    animation: ringRotate 24s linear infinite reverse;
 }
 
 .hero-orb span {
@@ -1986,9 +2022,8 @@ body.modal-open .cursor-ring {
     to { opacity: 1; transform: none; }
 }
 
-@keyframes ringPulse {
-    0%, 100% { opacity: 0.35; transform: scale(1); }
-    50% { opacity: 0.85; transform: scale(1.04); }
+@keyframes ringRotate {
+    to { transform: rotate(360deg); }
 }
 
 /* ============================================================
