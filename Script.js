@@ -60,12 +60,12 @@ const CONFIG = {
             "images/social media post/wht we can do .png"
         ],
         "Brand Identity": [
+            "images/logo and brand identity/luna caffe .png",
             "images/logo and brand identity/Digital Boost Brand Identity Board.png",
             "images/logo and brand identity/Velvet Muse Luxury Brand Board.png",
             "images/logo and brand identity/digital boost.png",
             "images/logo and brand identity/hoorvela.png",
             "images/logo and brand identity/hoovela identity.png",
-            "images/logo and brand identity/luna caffe .png",
             "images/logo and brand identity/luna identity.png",
             "images/logo and brand identity/velvet muse.png"
         ],
@@ -117,6 +117,18 @@ const CONFIG = {
             title: "Selected Reel 02 — Social Media Motion Story",
             tag: "SOCIAL EDIT · SHORT-FORM",
             src: "images/video/WhatsApp Video 2026-11-10 at 8.40.12 PM.mp4",
+            duration: "HD Reel"
+        },
+        {
+            title: "Selected Reel 03 — Creative Brand Edit",
+            tag: "BRAND EDIT · CREATIVE",
+            src: "images/video/WhatsApp Video 2026-10-20 at 5.53.50 PM.mp4",
+            duration: "HD Reel"
+        },
+        {
+            title: "Selected Reel 04 — Visual Story",
+            tag: "VISUAL STORY · SHORT-FORM",
+            src: "images/video/WhatsApp Video 2026-10-27 at 10.31.28 PM.mp4",
             duration: "HD Reel"
         }
     ]
@@ -412,10 +424,10 @@ let currentCategoryDesigns = [];
 
 // Curated high-impact featured cover for each category (1 design shown upfront)
 const featuredCovers = {
-    "Social Media": "images/social media post/Graphic.png",
-    "Brand Identity": "images/logo and brand identity/Velvet Muse Luxury Brand Board.png",
+    "Social Media": "images/social media post/gD.png",
+    "Brand Identity": "images/logo and brand identity/luna caffe .png",
     "Business Cards & Stationery": "images/Business Cards & Stationery/Tooba Murtaza.png",
-    "Packaging & Labels": "images/packaging and label design/PREMIUM ATTAR.png",
+    "Packaging & Labels": "images/packaging and label design/ChatGPT Image Sep 4, 2026, 06_37_24 PM.png",
     "Typography": "images/typography/mistake.jpg",
     "Banners & Vector Art": "images/Banners, Covers & Vector Art/birdo.jpg",
     "Carousel": "images/carousal/SMALL STEPS BIG PROGRESS.png"
@@ -506,6 +518,9 @@ function buildGalleryFilterTabs() {
 function renderCategoryDesigns(category = 'All') {
     gallery.innerHTML = '';
     const list = category === 'All' ? designs : designs.filter(d => d.category === category);
+    const featuredSrc = featuredCovers[category];
+    const featuredIndex = list.findIndex(d => d.src === featuredSrc);
+    if (featuredIndex > 0) list.unshift(list.splice(featuredIndex, 1)[0]);
     currentCategoryDesigns = list;
     $('#g-count').textContent = `${list.length} DESIGNS`;
 
