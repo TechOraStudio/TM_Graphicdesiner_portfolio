@@ -752,16 +752,6 @@ $$('.service-item').forEach(item => {
 /* ============================================================
    12. CONTACT FORM & SOCIALS
    ============================================================ */
-const mailBtn = $('#mail-btn');
-
-if (mailBtn) {
-    mailBtn.addEventListener('click', () => {
-        contactStatus.textContent = '';
-        document.body.classList.add('modal-open');
-        contactDialog.showModal();
-    });
-}
-
 $('.contact-dialog-close').addEventListener('click', () => contactDialog.close());
 contactDialog.addEventListener('close', () => document.body.classList.remove('modal-open'));
 contactDialog.addEventListener('click', e => {
